@@ -1,0 +1,77 @@
+.js-animation {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(40px);
+    transition: all 1s;
+  }
+
+.js-animation.is-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+
+
+.container {
+  background-color: white;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.web-seisaku {
+  margin: 0 auto;
+}
+
+.web-seisaku-img {
+  display: block;
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.insatubutu {
+  margin: 0 auto;
+  padding: 10px auto;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.meisi {
+  display: flex;
+  max-width: 700px;
+  /* width: 100%; */
+  margin: 0 auto;
+}
+
+.meisi-img {
+  max-width: 300px;
+  margin: 10px;
+}
+
+.postar {
+  display: flex;
+  max-width: 700px;
+  /* width: 100%; */
+  margin: 0 auto;
+
+}
+
+.postar-img {
+  width: 300px;
+  height: auto;
+  margin: 10px;
+
+}
+
+@media screen and (max-width:768px) {
+  .insatubutu, .meisi, .postar {
+    display: block;
+  }
+
+  .postar, .meisi {
+    text-align: center;
+  }
+
+}

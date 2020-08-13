@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container js-animation">
+       <h2 class="js-animation">WEBサイト制作</h2>
+       <p class="js-animation">ワードプレスをはじめCMSを用いたサイト制作、名刺変わりのお手軽ホームページ制作などWEBサイトの代行制作承ります。</p>
+            <h3 class="js-animation">WordPress</h3>
+                <div class="web-seisaku js-animation">
+                    <a href="https://takuchan.club" target="_blank"><img src="meisi2omote.jpg" alt="ここのサイト画像" class="web-seisaku-img js-animation"></a>
+                    <p class="js-animation">今開かれている当サイトですｗ<br>このサイトはワードプレスで構築していて、有料のテーマを小加工して設置しています。<br>
+                    （元々は趣味ブログだったサイトをフリーランスになった際に業務用に改築して運営しています。）<br>
+                    メニュー直下のランディングページ部分や、固定ページ部分は全てコードをスクラッチして制作。<br>
+                    有料テーマをベースにしているので、構造的な部分にあまり手を掛けなくても綺麗にまとまってくれるので、基本構造はそのままなんです。<br>
+                    趣味ブログだった痕跡は今もあちこちにありますが、これはこれで個性があって良いのかなぁと思い、そのままにしてたりしますｗ</p>
+                </div>
+            <h3 class="js-animation">HTMLスクラッチによる名刺サイト</h3>
+                <div class="web-seisaku js-animation">
+                    <a href="https://ichinoseki.areguriasu.takuchan.club/" target="_blank"><img src="top1-2.jpg" alt="areguriasu" class="web-seisaku-img js-animation"></a>
+                    <p class="js-animation">マンションのオーナーからマンションのHPを作って欲しいという依頼から制作したサイト。<br>
+                        ブログ機能は必要ないとの事でしたので、HTMLとCSSのスクラッチ、後はJavaScriptで動的なコーディングも行いました。<br>
+                        また、TOPの画像の撮影から加工編集（HDR処理）まで行っています。</p>
+                </div>
+                <br>
+                <br>
+       <h2 class="js-animation">印刷物</h2>
+       <p class="js-animation">印刷物のデザインも承ります。<br>Photoshop、Illustratorを用いて一点物をデザインしますので御用命ください。</p>
+            <h3 class="js-animation">名刺</h3>
+            <p class="js-animation">ベタ塗りから写真、ロゴマークを入れた物まで対応可能です。</p>
+                <div class="insatubutu js-animation">
+                    <div class="meisi js-animation">
+                        <a href="meisi2omote.jpg" target="_blank"><img src="meisi2omote.jpg" alt="名刺サンプル" class="meisi-img js-animation"></a>
+                        <a href="meisi2ura.jpg" target="_blank"><img src="meisi2ura.jpg" alt="名刺サンプル" class="meisi-img js-animation"></a>
+                    </div>
+                    <div class="meisi js-animation">
+                        <a href="meisi1omote.jpg" target="_blank"><img src="meisi1omote.jpg" alt="名刺サンプル" class="meisi-img js-animation"></a>
+                        <a href="meisi1ura.jpg" target="_blank"><img src="meisi1ura.jpg" alt="名刺サンプル" class="meisi-img js-animation"></a>
+                    </div>
+                </div>
+                <br>
+            <h3 class="js-animation">ポスター</h3>
+            <p class="js-animation">ヌリタシの設定から大サイズまで、ご希望に応じて対応致します。</p>
+                <div class="insatubutu js-animation">
+                    <div class="postar js-animation">
+                        <a href="itaria.png" target="_blank"><img src="itaria.png" alt="ポスターサンプル" class="postar-img js-animation"></a>
+                        <a href="bounennkai.png" target="_blank"><img src="bounennkai.png" alt="ブラックな会社の忘年会ポスター" class="postar-img "></a>
+                    </div>
+                </div>
+                <br>
+       <h2 class="js-animation">過去のポートフォリオ</h2>
+       <p class="js-animation">以前のポートフォリオはコチラへまとめました。</p>
+       <a href="https://takushi.sato.seisakubutu.1111.mixh.jp/" target="_blank">過去のポートフォリオはコチラをクリック</a>
+
+
+    </div>
+
+    
+    <script type="text/javascript">
+        function showElementAnimation() {
+
+        var element = document.getElementsByClassName('js-animation');
+        if(!element) return; 
+
+        var showTiming = window.innerHeight > 768 ? 200 : 40;
+        var scrollY = window.pageYOffset;
+        var windowH = window.innerHeight;
+
+        for(var i=0;i<element.length;i++) { var elemClientRect = element[i].getBoundingClientRect(); var elemY = scrollY + elemClientRect.top; if(scrollY + windowH - showTiming > elemY) {
+            element[i].classList.add('is-show');
+        } else if(scrollY + windowH < elemY) {
+            
+            element[i].classList.remove('is-show');
+        }
+        }
+    }
+    showElementAnimation();
+    window.addEventListener('scroll', showElementAnimation);
+    </script>
+</body>
+</html>
